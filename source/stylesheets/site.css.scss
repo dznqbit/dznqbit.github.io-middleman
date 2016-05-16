@@ -2,9 +2,9 @@
 @import "normalize";
 
 body {
-  background: #ECC561;
+  background: white;
   text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
 }
 
@@ -14,38 +14,33 @@ body {
 }
 
 h1 {
-  color: rgba(0,0,0,0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
+  color: #bf8322;
+  font-family: "Pacifico", Helvetica, Arial, sans-serif;
+  font-size: 5em;
+  letter-spacing: -2px;
   margin: 0;
 }
 
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
+.boxes {
+  width: 70%;
+  margin: 0 auto;
 
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
-    }
+  > .box {
+    float: left;
+
+    width: calc(20%);
+    margin-bottom: 10px;
+
+    height: 100px;
+    color: black;
   }
 }
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
-}
+.-c1 { background-color: #e5dcce; }
+.-c2 { background-color: #f2c041; }
+.-c3 { background-color: #bf8322; }
+.-c4 { background-color: #140e02; }
+.-c5 { background-color: #593310; }
 
 @-webkit-keyframes welcome {
   from {
