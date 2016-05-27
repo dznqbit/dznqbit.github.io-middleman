@@ -18,6 +18,11 @@ page '/*.txt', layout: false
 
 # General configuration
 
+activate :blog do |blog|
+  blog.permalink = "blog/{category}/{title}.html"
+  # blog options
+end
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
