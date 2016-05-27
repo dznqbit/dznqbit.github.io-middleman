@@ -1,0 +1,7 @@
+%section.articles
+  - blog.articles[0...5].each do |article|
+    %article
+      %h3
+        = link_to article.title, article.url, class: 'link'
+
+      = article.body

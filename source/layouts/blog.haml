@@ -1,0 +1,6 @@
+= wrap_layout :layout do
+  %article
+    %h2
+      = link_to "#{current_page.data.category}: #{current_page.data.title}", '#', class: 'link'
+
+    = yield

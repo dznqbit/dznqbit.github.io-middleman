@@ -18,10 +18,21 @@ page '/*.txt', layout: false
 
 # General configuration
 
+# Pretty directory indexes.
+activate :directory_indexes
+
+ignore '*.swp'
+
 activate :blog do |blog|
-  blog.permalink = "blog/{category}/{title}.html"
-  # blog options
+  blog.sources = "blog/{_}/{_}"
+  blog.permalink = "{category}/{title}"
+  blog.layout = false
 end
+
+
+set :layout, :layout
+
+page "blog/*/*", layout: :blog
 
 # Reload the browser automatically whenever files change
 configure :development do

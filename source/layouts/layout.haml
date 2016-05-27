@@ -7,11 +7,14 @@
 
     %title= current_page.data.title || 'dznqbit'
 
-    %link{ href: '//fonts.googleapis.com/css?family=Pacifico',      rel: 'stylesheet', type: 'text/css' }
+    %link{ href: '//fonts.googleapis.com/css?family=Pacifico', rel: 'stylesheet', type: 'text/css' }
 
     = stylesheet_link_tag :site
     = javascript_include_tag :all
 
   %body
-    %h1 dznqbit
-    = yield
+    %h1
+      = link_to 'dznqbit', '/', class: 'link -h1'
+
+    %main
+      = yield
