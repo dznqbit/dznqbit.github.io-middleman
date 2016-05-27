@@ -406,9 +406,9 @@ textarea {
 
 /* line 4, site.css.scss */
 body {
-  background: #ECC561;
+  background: white;
   text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1em; }
 
 /* line 11, site.css.scss */
@@ -418,36 +418,43 @@ body {
 
 /* line 16, site.css.scss */
 h1 {
-  color: rgba(0, 0, 0, 0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
+  color: #e61040;
+  font-family: "Pacifico", Helvetica, Arial, sans-serif;
+  font-size: 5em;
+  letter-spacing: -2px;
   margin: 0; }
 
 /* line 24, site.css.scss */
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300; }
-  /* line 30, site.css.scss */
-  .doc a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear; }
-    /* line 37, site.css.scss */
-    .doc a:hover {
-      background: rgba(0, 0, 0, 0.2);
-      color: white;
-      transition: all 0.15s linear; }
+.boxes {
+  width: 70%;
+  margin: 0 auto; }
+  /* line 28, site.css.scss */
+  .boxes > .box {
+    float: left;
+    width: calc(20%);
+    margin-bottom: 10px;
+    height: 100px;
+    color: black; }
 
-/* line 45, site.css.scss */
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
+/* line 39, site.css.scss */
+.-c1 {
+  background-color: #e5dcce; }
+
+/* line 40, site.css.scss */
+.-c2 {
+  background-color: #f2c041; }
+
+/* line 41, site.css.scss */
+.-c3 {
+  background-color: #bf8322; }
+
+/* line 42, site.css.scss */
+.-c4 {
+  background-color: #140e02; }
+
+/* line 43, site.css.scss */
+.-c5 {
+  background-color: #593310; }
 
 @-webkit-keyframes welcome {
   from {
