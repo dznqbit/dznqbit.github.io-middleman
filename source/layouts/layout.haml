@@ -12,6 +12,9 @@
     = stylesheet_link_tag :site
     = javascript_include_tag :all
 
+    - if content_for?(:head)
+      = yield_content :head
+
   %body
     %h1
       = link_to 'dznqbit', '/', class: 'link -h1'

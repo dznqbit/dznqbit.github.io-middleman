@@ -50,6 +50,10 @@ h2 {
   text-align: center;
 }
 
+p {
+  line-height: 1.7em;
+}
+
 main {
   max-width: 820px;
   margin: 0 auto;
@@ -80,7 +84,7 @@ main {
   }
 }
 
-.codeBlock {
+.code-block {
   .__title {
     font-family: 'Courier New', 'Courier', monospace;
     font-weight: 600;
