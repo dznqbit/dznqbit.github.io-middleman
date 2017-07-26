@@ -1,0 +1,36 @@
+- content_for :body_classes, '-dark -fullBleed'
+- content_for :head do
+  = javascript_include_tag 'sort.bundle'
+  = stylesheet_link_tag 'sort.bundle'
+
+.container
+  #app
+    %dl.stats
+      %dt Algorithm
+      %dd {{ algorithm_name }}
+      %dt List Length
+      %dd {{ values.length }}
+      %dt Comparisons
+      %dd {{ comparisons }}
+      %dt Swaps
+      %dd {{ swaps }}
+
+    %ul.list
+      %li.__entry{ :'v-for' => "v in values" }
+        .value{ 'v-bind:class' => "{ '-current': v.current, '-compared': v.compared, '-f0': v.flag0, '-f1': v.flag1, '-f2': v.flag2 }", 'v-bind:style' => "{ height: v.value + 'px' }" } {{ v.value }}
+
+    %ul.buttons
+      %li
+        %button.button.-newList{ :'v-on:click' => 'newList()' } randomize
+      %li
+        %button.button.-bubbleSort{ :'v-on:click' => 'bubbleSort()' } bubblesort
+      %li
+        %button.button.-bubbleSort{ :'v-on:click' => 'insertionSort()' } insertionsort
+      %li
+        %button.button.-bubbleSort{ :'v-on:click' => 'selectionSort()' } selectionsort
+      %li
+        %button.button.-bubbleSort{ :'v-on:click' => 'mergeSort()' } mergesort
+      %li
+        %button.button.-bubbleSort{ :'v-on:click' => 'quicksortLomuto()', disabled: 'disabled' } quicksort (Lomuto)
+      %li
+        %button.button.-bubbleSort{ :'v-on:click' => 'quicksortHoare()', disabled: 'disabled' } quicksort (Hoare)

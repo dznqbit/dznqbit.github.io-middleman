@@ -1,0 +1,110 @@
+/* assets/stylesheets/sort.scss */
+
+body {
+  background: #111;
+}
+
+#app {
+  width: calc(100% - 64px);
+  margin: 32px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+}
+
+.list {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .__entry {
+    display: block;
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: 0 2px;
+  }
+}
+
+.value {
+  width: 100%;
+  background: #222;
+  color: #666;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 5px 20px 5px;
+
+  // The current value we're checking
+  &.-current { background-color: #2C2C2C; }
+
+  // The comparison against .-current
+  &.-compared { background-color: #211; }
+
+  &.-f0 { background-color: #141; }
+  &.-f1 { background-color: #114; }
+  &.-f2 { background-color: #411; }
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row-inline;
+  justify-content: space-between;
+
+  > li {
+    width: 100%;
+    margin: 0 2px;
+  }
+}
+
+.button {
+  cursor: pointer;
+  width: 100%;
+  color: black;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  text-align: center;
+  margin: 4px 0;
+  padding: 20px;
+  border: none;
+  background-color: #773500;
+  transition: background-color 0.1s ease-in;
+
+  &:focus { outline: 0; }
+  &:disabled { opacity: 0.8; cursor: not-allowed; }
+  &:hover {
+    background-color: #80400A;
+  }
+}
+
+.stats {
+  padding: 20px;
+  line-height: 1.4em;
+  background: #222;
+  color: #666;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  margin: 0 0 80px auto;
+
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 300px;
+
+  dt {
+    flex-basis: 50%;
+  }
+
+  dd {
+    flex-basis: 50%;
+    text-align: right;
+  }
+}

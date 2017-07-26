@@ -63,3 +63,15 @@ activate :deploy do |deploy|
   deploy.deploy_method = :git
   deploy.branch = 'master'
 end
+
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ?
+  "./node_modules/webpack/bin/webpack.js --bail -p" :
+  "./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
+  source: ".tmp/dist",
+  latency: 1
+
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'

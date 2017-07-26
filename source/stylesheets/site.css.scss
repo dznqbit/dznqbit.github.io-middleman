@@ -26,6 +26,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
   color: $dzn-black;
+
 }
 
 .logo img {
@@ -40,6 +41,7 @@ h1 {
   margin: 0;
   text-align: center;
 }
+
 
 h2 {
   $font-size: 2rem;
@@ -74,13 +76,9 @@ main {
     cursor: pointer;
   }
 
-  &.-h1 {
+  &.--pink {
     color: $dzn-pink;
-
-    &:hover {
-      color: $dzn-black;
-      cursor: pointer;
-    }
+    &:hover { color: black; }
   }
 }
 
@@ -110,5 +108,17 @@ main {
 
   &.--inline {
     padding: $dzn-small-gutter;
+  }
+}
+
+body.--dark {
+  background: #111;
+  color: #aaa;
+
+  .link {
+    &.--pink {
+      color: $dzn-pink;
+      &:hover { color: #666; }
+    }
   }
 }
