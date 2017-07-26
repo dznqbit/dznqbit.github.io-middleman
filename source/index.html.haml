@@ -1,1 +1,21 @@
-Hello Haml World
+.flexRow
+  %section
+    %h2 projects
+
+    %ul
+      %li= link_to 'sorting visualizations', 'sort'
+      %li= link_to 'game of life 6', 'conway6'
+
+  %section.contact
+    %h2 contact
+
+    %ul
+      %li Quinton Harris
+      %li @dznqbit
+      %li quinton.harris@gmail.com
+
+%section.articles
+  - blog.articles[0...5].each do |article|
+    %article
+      %h2= link_to article.title, article.url, class: 'link'
+      = article.body

@@ -1,0 +1,38 @@
+{
+  "name": "dznqbit",
+  "version": "1.0.0",
+  "description": "dznqbits cool blog",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development ./node_modules/webpack/bin/webpack.js --watch -d --color",
+    "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dznqbit/dznqbit.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dznqbit/dznqbit.github.io/issues"
+  },
+  "homepage": "https://github.com/dznqbit/dznqbit.github.io#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "breakpoint-sass": "^2.7.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "d3": "^4.9.1",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.6",
+    "vue": "^2.4.1",
+    "webpack": "^3.2.0"
+  },
+  "dependencies": {
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2"
+  }
+}

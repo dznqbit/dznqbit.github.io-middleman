@@ -1,0 +1,28 @@
+@import 'settings';
+
+.hexagon {
+  fill: white;
+  pointer-events: all;
+
+  &:hover {
+    cursor: pointer;
+    fill: $dzn-pink;
+  }
+}
+
+.hexagon path {
+  -webkit-transition: fill 250ms linear;
+  transition: fill 250ms linear;
+}
+
+.hexagon.fill {
+  fill: $dzn-pink;
+}
+
+.border {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+  pointer-events: none;
+}
+

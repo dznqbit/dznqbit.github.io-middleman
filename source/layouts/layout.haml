@@ -1,0 +1,23 @@
+!!! html
+%html
+  %head
+    %meta{ content: 'IE=edge', http_equiv: 'X-UA-Compatible' }
+    %meta{ charset: 'utf-8' }
+    %meta{ content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no', name: 'viewport' }
+
+    %title= current_page.data.title || 'dznqbit'
+
+    %link{ href: '//fonts.googleapis.com/css?family=Pacifico', rel: 'stylesheet', type: 'text/css' }
+
+    = stylesheet_link_tag 'main.bundle'
+
+    = yield_content :head
+
+  %body{ class: yield_content(:body_classes) }
+    %h1
+      = link_to 'dznqbit', '/', class: 'link -pink'
+
+    %main
+      = yield
+
+    = javascript_include_tag "main.bundle"

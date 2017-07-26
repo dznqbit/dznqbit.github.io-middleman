@@ -1,11 +1,32 @@
 @charset "utf-8";
 @import "normalize";
 
+$dzn-gutter: 1.5rem;
+$dzn-small-gutter: $dzn-gutter / 4;
+
+$dzn-off-white: #fefeee;
+$dzn-off-white-2: #e6e6d3;
+$dzn-black: #0d0801;
+$dzn-brown: #1a0f00;
+$dzn-pink: #e61040;
+$dzn-yellow: #ff971d;
+
+a {
+  color: $dzn-black;
+
+  &:hover {
+    color: $dzn-yellow;
+    cursor: pointer;
+  }
+}
+
 body {
-  background: #ECC561;
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: white;
+  text-align: left;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
+  color: $dzn-black;
+
 }
 
 .logo img {
@@ -14,54 +35,90 @@ body {
 }
 
 h1 {
-  color: rgba(0,0,0,0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
+  font-family: "Pacifico", Helvetica, Arial, sans-serif;
+  font-size: 5rem;
+  letter-spacing: -2px;
   margin: 0;
+  text-align: center;
 }
 
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
 
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
+h2 {
+  $font-size: 2rem;
+  font-size: $font-size;
+  line-height: 1.2 * $font-size;
+  font-family: 'Courier New', 'Courier', monospace;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+p {
+  line-height: 1.7em;
+}
+
+main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// Baby BEM.
+// blocks:    names-are-dashed-case
+// modifier:  --my-modifier-name
+// element:   __my-element-name
+
+.link {
+  text-decoration: none;
+  color: $dzn-black;
+
+  &:hover {
+    color: $dzn-yellow;
+    cursor: pointer;
+  }
+
+  &.--pink {
+    color: $dzn-pink;
+    &:hover { color: black; }
+  }
+}
+
+.code-block {
+  .__title {
+    font-family: 'Courier New', 'Courier', monospace;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+
+    color: #444;
+  }
+
+  .__code {
+    margin-top: 0;
+  }
+}
+
+.code {
+  color: $dzn-brown;
+  background-color: $dzn-off-white-2;
+  line-height: 1.35rem;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-weight: 600;
+  text-align: left;
+  padding: $dzn-gutter;
+
+  &.--inline {
+    padding: $dzn-small-gutter;
+  }
+}
+
+body.--dark {
+  background: #111;
+  color: #aaa;
+
+  .link {
+    &.--pink {
+      color: $dzn-pink;
+      &:hover { color: #666; }
     }
-  }
-}
-
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
-}
-
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
   }
 }
