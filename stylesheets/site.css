@@ -404,61 +404,85 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/* line 4, site.css.scss */
-body {
-  background: #ECC561;
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em; }
+/* line 14, site.css.scss */
+a {
+  color: #0d0801; }
+  /* line 17, site.css.scss */
+  a:hover {
+    color: #ff971d;
+    cursor: pointer; }
 
-/* line 11, site.css.scss */
+/* line 23, site.css.scss */
+body {
+  background: #fefeee;
+  text-align: left;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  color: #0d0801; }
+
+/* line 31, site.css.scss */
 .logo img {
   height: 18.75em;
   margin-top: 6em; }
 
-/* line 16, site.css.scss */
+/* line 36, site.css.scss */
 h1 {
-  color: rgba(0, 0, 0, 0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
-  margin: 0; }
+  font-family: "Pacifico", Helvetica, Arial, sans-serif;
+  font-size: 5rem;
+  letter-spacing: -2px;
+  margin: 0;
+  text-align: center; }
 
-/* line 24, site.css.scss */
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300; }
-  /* line 30, site.css.scss */
-  .doc a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear; }
-    /* line 37, site.css.scss */
-    .doc a:hover {
-      background: rgba(0, 0, 0, 0.2);
-      color: white;
-      transition: all 0.15s linear; }
+/* line 44, site.css.scss */
+h2 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-family: 'Courier New', 'Courier', monospace;
+  text-transform: lowercase;
+  text-align: center; }
 
-/* line 45, site.css.scss */
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
+/* line 53, site.css.scss */
+main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 1.5rem; }
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0; }
-  50% {
-    -webkit-transform: scale(0);
-    opacity: 0; }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1; }
-  to {
-    -webkit-transform: scale(1); } }
+/* line 64, site.css.scss */
+.link {
+  text-decoration: none;
+  color: #0d0801; }
+  /* line 68, site.css.scss */
+  .link:hover {
+    color: #ff971d;
+    cursor: pointer; }
+  /* line 73, site.css.scss */
+  .link.-h1 {
+    color: #e61040; }
+    /* line 76, site.css.scss */
+    .link.-h1:hover {
+      color: #0d0801;
+      cursor: pointer; }
+
+/* line 84, site.css.scss */
+.codeBlock .__title {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  color: #444; }
+/* line 93, site.css.scss */
+.codeBlock .__code {
+  margin-top: 0; }
+
+/* line 98, site.css.scss */
+.code {
+  color: #1a0f00;
+  background-color: #e6e6d3;
+  line-height: 1.35rem;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-weight: 600;
+  text-align: left;
+  padding: 1.5rem; }
+  /* line 107, site.css.scss */
+  .code.--inline {
+    padding: 0.375rem; }
