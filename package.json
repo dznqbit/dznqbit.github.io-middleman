@@ -25,6 +25,7 @@
     "clean-webpack-plugin": "^0.1.16",
     "d3": "^4.9.1",
     "extract-text-webpack-plugin": "^2.1.2",
+    "lodash": "^4.17.4",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
@@ -33,6 +34,8 @@
   },
   "dependencies": {
     "css-loader": "^0.28.4",
-    "style-loader": "^0.18.2"
+    "font-awesome-webpack": "0.0.5-beta.2",
+    "style-loader": "^0.18.2",
+    "vue-select": "^2.2.0"
   }
 }
