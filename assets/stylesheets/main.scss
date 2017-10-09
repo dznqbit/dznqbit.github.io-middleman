@@ -1,6 +1,7 @@
 @import '~breakpoint-sass/stylesheets/breakpoint';
 @import 'settings';
 @import 'reset';
+@import 'wwnd';
 
 a {
   color: $dzn-black;
@@ -26,6 +27,15 @@ body {
     font-size: 0.8em;
 
   }
+
+  &.-fullBleed {
+    padding: 0;
+
+    main {
+      max-width: none;
+      padding: 0;
+    }
+  }
 }
 
 .logo img {
@@ -43,6 +53,16 @@ h1 {
 
 
 h2 {
+  font-family: Georgia, serif;
+  font-size: 1.4em;
+  line-height: 1.8em;
+  margin-bottom: 1.2em;
+  font-weight: bold;
+  text-transform: lowercase;
+  text-align: left;
+}
+
+h3 {
   $font-size: 1em;
   font-size: $font-size;
   line-height: 1.2 * $font-size;
@@ -116,21 +136,3 @@ ul li {
   }
 }
 
-
-body.-fullBleed {
-  main {
-    max-width: none;
-  }
-}
-
-body.-dark {
-  background: #111;
-  color: #aaa;
-
-  .link {
-    &.-pink {
-      color: $dzn-pink;
-      &:hover { color: #666; }
-    }
-  }
-}

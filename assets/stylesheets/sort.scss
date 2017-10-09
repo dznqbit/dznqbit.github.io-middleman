@@ -1,18 +1,45 @@
 /* assets/stylesheets/sort.scss */
-
-body {
-  background: #111;
-}
+@import 'settings';
 
 #app {
-  width: calc(100% - 64px);
-  margin: 32px;
+  width: 100%;
+  margin: 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
 }
 
+.u-border-bottom {
+}
+
+.shuttle,
+.stats {
+  border-bottom: 1px solid $dzn-blue;
+  padding: 20px 1%;
+  // box-shadow: 0 2px 1px #E0E0EA;
+}
+
+.stats {
+  padding: 10px;
+
+  font-family: Courier, monospace;
+  font-size: 12px;
+
+  display: flex;
+  flex-flow: row nowrap;
+
+  dt {
+  }
+
+  dd {
+    padding: 0 25px 0 5px;
+    text-align: right;
+    font-weight: bold;
+  }
+}
+
 .list {
+  padding: 1%;
   display: flex;
   flex-flow: row nowrap;
 
@@ -30,10 +57,12 @@ body {
 
 .value {
   width: 100%;
-  background: #222;
-  color: #666;
+  background: $dzn-black;
+  color: white;
   font-family: Helvetica, sans-serif;
-  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.85px;
+//  font-weight: bold;
   text-align: center;
   padding: 5px 5px 20px 5px;
 
@@ -83,28 +112,3 @@ body {
   }
 }
 
-.stats {
-  padding: 20px;
-  line-height: 1.4em;
-  background: #222;
-  color: #666;
-  font-family: Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  text-transform: uppercase;
-
-  margin: 0 0 80px auto;
-
-  display: flex;
-  flex-flow: row wrap;
-  max-width: 300px;
-
-  dt {
-    flex-basis: 50%;
-  }
-
-  dd {
-    flex-basis: 50%;
-    text-align: right;
-  }
-}

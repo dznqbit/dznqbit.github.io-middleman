@@ -14,8 +14,9 @@
     = yield_content :head
 
   %body{ class: yield_content(:body_classes) }
-    %h1
-      = link_to 'dznqbit', '/', class: 'link -pink'
+    - if :logo
+      %h1
+        = link_to 'dznqbit', '/', class: 'link -pink'
 
     %main
       = yield

@@ -33,10 +33,11 @@ end
 set :layout, :layout
 
 page "blog/*/*", layout: :blog
+page "/cv"
 
 # Reload the browser automatically whenever files change
 configure :development do
-#  activate :livereload
+  activate :livereload
 end
 
 ###

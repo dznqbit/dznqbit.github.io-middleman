@@ -14,8 +14,17 @@
       %li @dznqbit
       %li quinton.harris@gmail.com
 
+%section.blog
+  %h2 about
+  %p
+    = image_tag 'under-construction.gif'
+    you know how it is
+    = image_tag 'under-construction.gif'
+
 %section.articles
+  %h2 blog
+
   - blog.articles[0...5].each do |article|
     %article
-      %h2= link_to article.title, article.url, class: 'link'
+      %h3= link_to article.title, article.url, class: 'link'
       = article.body
