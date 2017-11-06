@@ -1,6 +1,12 @@
+// Baby BEM.
+// blocks:    blockName
+// modifier:  -modifierName
+// element:   __elementName
+
 @import '~breakpoint-sass/stylesheets/breakpoint';
 @import 'settings';
 @import 'reset';
+@import 'lib/flexRow';
 
 a {
   color: $dzn-black;
@@ -12,10 +18,11 @@ a {
 }
 
 body {
-  background: white;
+  background: #fff;
   text-align: left;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
+  line-height: 1.6em;
   color: $dzn-black;
 
   padding: 20px;
@@ -28,28 +35,43 @@ body {
   }
 }
 
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
-}
-
-h1 {
+h1, .logo {
   font-family: "Pacifico", Helvetica, Arial, sans-serif;
   font-size: 5em;
+  line-height: 1em;
   letter-spacing: -2px;
   margin: 20px 0 40px 0;
   text-align: center;
 }
 
+.logo {
+  @media print {
+    display: none;
+  }
+}
 
 h2 {
+  font-family: 'Georgia', serif;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  font-weight: bold;
+  text-transform: lowercase;
+  text-align: left;
+  margin: 2em 0 1em;
+
+  &.-caps {
+    text-transform: capitalize;
+  }
+}
+
+h3 {
   $font-size: 1em;
   font-size: $font-size;
   line-height: 1.2 * $font-size;
   font-weight: bold;
   text-transform: lowercase;
   text-align: left;
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 
 p {
@@ -66,24 +88,31 @@ section {
   margin: $dzn-gutter 0;
 }
 
-ul li {
-  padding: 4px 0;
+ul {
+  li {
+    margin: 0.4em 0;
+  }
 
+  &.inlineList {
+    display: inline;
+    padding: 0;
+
+    > li {
+      display: inline;
+
+      &::after {
+        content: ', ';
+      }
+
+      &:last-child::after { content: none; }
+
+    }
+  }
 }
 
-// Baby BEM.
-// blocks:    blockName
-// modifier:  -modifierName
-// element:   __elementName
 
-.flexRow {
-  display: flex;
-  flex-flow: row nowrap;
-}
 
 .contact {
-  margin-left: auto;
-  flex-basis: 39%;
 }
 
 .link {
@@ -134,3 +163,8 @@ body.-dark {
     }
   }
 }
+
+// And now import site content?
+// TODO find better filestructure
+@import "index";
+@import "cv";
