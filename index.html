@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='IE=edge' http_equiv='X-UA-Compatible'>
+    <meta charset='utf-8'>
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'>
+    <title>dznqbit</title>
+    <link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/all.js"></script>
+  </head>
+  <body>
+    <h1>
+      <a class="link -h1" href="/">dznqbit</a>
+    </h1>
+    <main>
+      <section class='articles'>
+        <article>
+          <h3>
+            <a class="link" href="/stupid-ruby-tricks/pre-tags-inside-haml-without-going-insane/">pre Tags Inside Haml Without Going Insane</a>
+          </h3>
+          <p>
+            Stuffing some genius code inside
+            <span class='code --inline'>&lt;pre&gt;</span>
+            tags?
+          </p>
+          <p>
+            And you just
+            <strong>need</strong>
+            to use
+            <a href="http://haml.info/">haml</a>
+            because you can't even
+            <span class='code --inline'>&lt;</span>
+            and
+            <span class='code --inline'>&gt;</span>
+            ?
+            Use a
+            <a href="https://infinum.co/the-capsized-eight/articles/multiline-strings-ruby-2-3-0-the-squiggly-heredoc">squiggly</a>
+            <span class='code --inline'>HEREDOC</span>
+            .
+          </p>
+          <div class='codeBlock'>
+            <h6 class='__title'>win.html.haml</h6>
+            <pre class='code __code'>%h1 &lt;3 Ruby 2.3&#x000A;&#x000A;:ruby&#x000A;  my_ruby_code = <<~'EOS'&#x000A;    next_level = [1, 2, 3].map do |i|&#x000A;      i + 1&#x000A;    end&#x000A;&#x000A;    puts next_level.join(" ")&#x000A;  EOS&#x000A;&#x000A;%pre= my_ruby_code</pre>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

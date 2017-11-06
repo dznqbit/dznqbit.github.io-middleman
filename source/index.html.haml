@@ -1,25 +1,29 @@
+:ruby
+  content_for :body_class, 'index'
+
 .flexRow
-  %section
-    %h2 projects
-
-    %ul
-      %li= link_to 'sorting visualizations', 'sort'
-      %li= link_to 'game of life 6', 'conway6'
-
   %section.contact
-    %h2 contact
+    %h2 About
+    %p
+      Alaska Grown
+      #{ link_to 'computer programmer', 'https://github.com/dznqbit' } and
+      #{ link_to 'musician', 'https://breaksandswells.com' }.
+      I live in Seattle.
 
+    %h2 Contact
     %ul
       %li Quinton Harris
-      %li @dznqbit
-      %li quinton.harris@gmail.com
+      %li @dznqbit everywhere
+      %li #{link_to 'quinton.harris@gmail.com', 'mailto:quinton.harris@gmail.com'}
 
-%section.blog
-  %h2 about
-  %p
-    = image_tag 'under-construction.gif'
-    you know how it is
-    = image_tag 'under-construction.gif'
+    %h2= link_to 'cv / resume', '/cv'
+
+  %section
+    %h2 Cool Stuff I've Written
+
+    %ul
+      %li= link_to 'sorting visualizations (codepen)', 'https://s.codepen.io/dznqbit/debug/QgJRNo/vPMKKVZzXgQM', target: '_blank'
+      %li= link_to 'interaction of color (codepen)', 'https://codepen.io/dznqbit/pen/MYGjMO'
 
 %section.articles
   %h2 blog

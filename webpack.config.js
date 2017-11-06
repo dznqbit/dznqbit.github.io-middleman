@@ -5,8 +5,8 @@ var Clean = require('clean-webpack-plugin');
 module.exports = {
   entry: {
     main: './assets/javascripts/main.js',
-    conway6: './assets/javascripts/conway6.js',
-    sort: './assets/javascripts/sort.js',
+    // conway6: './assets/javascripts/conway6.js',
+    // sort: './assets/javascripts/sort.js',
   },
 
   resolve: {
@@ -76,7 +76,12 @@ module.exports = {
             'sass-loader'
           ]
         }),
-      }
+      },
+
+      // Font-Awesome
+      // Per https://github.com/gowravshekar/font-awesome-webpack
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
     ]
   },
 
