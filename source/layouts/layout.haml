@@ -13,8 +13,8 @@
 
     = yield_content :head
 
-  %body{ class: yield_content(:body_classes) }
-    %h1
+  %body{ class: yield_content(:body_class) }
+    %h1.logo
       = link_to 'dznqbit', '/', class: 'link -pink'
 
     %main

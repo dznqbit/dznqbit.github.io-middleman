@@ -1,21 +1,36 @@
+:ruby
+  content_for :body_class, 'index'
+
 .flexRow
+  %section.contact
+    %h2 About
+    %p
+      Alaska Grown
+      #{ link_to 'computer programmer', 'https://github.com/dznqbit' } and
+      #{ link_to 'musician', 'https://breaksandswells.com' }.
+      I live in Seattle.
+
+    %h2 Contact
+    %ul
+      %li Quinton Harris
+      %li @dznqbit everywhere
+      %li #{link_to 'quinton.harris@gmail.com', 'mailto:quinton.harris@gmail.com'}
+
+    %h2= link_to 'cv / resume', '/cv'
+
   %section
-    %h2 projects
+    %h2 Cool Stuff I've Written
 
     %ul
       %li= link_to 'sorting visualizations (codepen)', 'https://s.codepen.io/dznqbit/debug/QgJRNo/vPMKKVZzXgQM', target: '_blank'
       %li= link_to 'interaction of color (codepen)', 'https://codepen.io/dznqbit/pen/MYGjMO'
 
-  %section.contact
-    %h2 contact
-
-    %ul
-      %li Quinton Harris
-      %li @dznqbit
-      %li quinton.harris@gmail.com
-
 %section.articles
+  %h2 blog
+
+  %p sorry but I don't really keep this active...
+
   - blog.articles[0...5].each do |article|
     %article
-      %h2= link_to article.title, article.url, class: 'link'
+      %h3= link_to article.title, article.url, class: 'link'
       = article.body
