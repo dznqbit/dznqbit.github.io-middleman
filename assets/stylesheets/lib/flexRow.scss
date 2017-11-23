@@ -1,0 +1,76 @@
+.flexRow {
+  $totalColumns: 18;
+
+  @media (min-width: $bp-mobile) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .-lh { order: 0; }
+    .-rh { order: 999; }
+
+    @function calcW($numColumns, $includeGutter: false) {
+      $totalGutters: $totalColumns - 1;
+
+      $gutterWidth: 10px;
+      $numGutters: if($includeGutter, $numColumns, $numColumns - 1);
+
+      @return calc(
+        (#{$numColumns}/#{$totalColumns} * (100% - (#{$totalGutters} * #{$gutterWidth}))) +
+        #{$gutterWidth} * #{$numGutters}
+      );
+    }
+
+    @for $i from 0 through 18 {
+      .-w#{$i} { width: calcW($i); }
+      .-o#{$i} { margin-left: calcW($i, true); }
+      .-ro#{$i} { margin-right: calcW($i, true); }
+    }
+
+    .-vCenter   { align-self: center; }
+    .-pullDown  { align-self: flex-end; }
+    .-stretch   { align-self: stretch;  }
+
+    &.-leftAlign  { justify-content: flex-start; }
+    &.-reverse    { flex-direction: row-reverse; }
+    &.-center {
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .-textCenter  { text-align: center; }
+    .-textRight   { text-align: right; }
+  } // media
+
+  // Where pages are fully-bled, hook back into the standard body margins.
+  &.-margin {
+    margin-left: 30px;
+    margin-right: 30px;
+
+    @media (max-width: $bp-tablet) {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  &.-bleed {
+    // Safari doesn't reload images upon viewport change, so just bleed the image
+    img { width: 100% !important; }
+
+    @media (max-width: $bp-mobile) {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    @media (min-width: $bp-mobile) {
+      @for $i from 1 through 18 {
+        .-w#{$i} { width: (100% * $i / $totalColumns); }
+      }
+    }
+  }
+
+  .video-js {
+    width: 100.1%;
+  }
+}
