@@ -44,12 +44,8 @@ end
 # Helpers
 ###
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+require 'helpers/google_analytics_helper'
+include GoogleAnalyticsHelper
 
 # Build-specific configuration
 configure :build do
