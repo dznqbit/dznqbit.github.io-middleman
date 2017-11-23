@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='IE=edge' http_equiv='X-UA-Compatible'>
+<meta charset='utf-8'>
+<meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'>
+<title>dznqbit</title>
+<link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href="/assets/stylesheets/main.bundle.css" rel="stylesheet" />
+<script src="/assets/javascripts/sort.bundle.js"></script>
+<link href="/assets/stylesheets/sort.bundle.css" rel="stylesheet" />
+
+</head>
+<body class='-dark -fullBleed'>
+<h1>
+<a href="/" class="link -pink">dznqbit</a>
+</h1>
+<main>
+<div class='container'>
+<div id='app'>
+<dl class='stats'>
+<dt>Algorithm</dt>
+<dd>{{ algorithm_name }}</dd>
+<dt>List Length</dt>
+<dd>{{ values.length }}</dd>
+<dt>Comparisons</dt>
+<dd>{{ comparisons }}</dd>
+<dt>Swaps</dt>
+<dd>{{ swaps }}</dd>
+</dl>
+<ul class='list'>
+<li class='__entry' v-for='v in values'>
+<div class='value' v-bind:class='{ &#39;-current&#39;: v.current, &#39;-compared&#39;: v.compared, &#39;-f0&#39;: v.flag0, &#39;-f1&#39;: v.flag1, &#39;-f2&#39;: v.flag2 }' v-bind:style='{ height: v.value + &#39;px&#39; }'>{{ v.value }}</div>
+</li>
+</ul>
+<ul class='buttons'>
+<li>
+<button class='button -newList' v-on:click='newList()'>randomize</button>
+</li>
+<li>
+<button class='button -bubbleSort' v-on:click='bubbleSort()'>bubblesort</button>
+</li>
+<li>
+<button class='button -bubbleSort' v-on:click='insertionSort()'>insertionsort</button>
+</li>
+<li>
+<button class='button -bubbleSort' v-on:click='selectionSort()'>selectionsort</button>
+</li>
+<li>
+<button class='button -bubbleSort' v-on:click='mergeSort()'>mergesort</button>
+</li>
+<li>
+<button class='button -bubbleSort' disabled='disabled' v-on:click='quicksortLomuto()'>quicksort (Lomuto)</button>
+</li>
+<li>
+<button class='button -bubbleSort' disabled='disabled' v-on:click='quicksortHoare()'>quicksort (Hoare)</button>
+</li>
+</ul>
+</div>
+</div>
+
+</main>
+<script src="/assets/javascripts/main.bundle.js"></script>
+</body>
+</html>

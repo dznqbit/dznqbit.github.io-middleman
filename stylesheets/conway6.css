@@ -441,3 +441,23 @@ body.--dark {
     color: #e61040; }
     body.--dark .link.--pink:hover {
       color: #666; }
+
+.hexagon {
+  fill: white;
+  pointer-events: all; }
+  .hexagon:hover {
+    cursor: pointer;
+    fill: #e61040; }
+
+.hexagon path {
+  -webkit-transition: fill 250ms linear;
+  transition: fill 250ms linear; }
+
+.hexagon.fill {
+  fill: #e61040; }
+
+.border {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+  pointer-events: none; }
