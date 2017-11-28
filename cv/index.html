@@ -25,22 +25,126 @@
 </h1>
 <main>
 <h2 class='-caps'>Quinton Harris</h2>
-<ul>
-<li><a href="mailto:quinton.harris@gmail.com">quinton.harris@gmail.com</a></li>
+<ul class='contact'>
+<li class='__email'><a href="mailto:quinton.harris@gmail.com">quinton.harris@gmail.com</a></li>
+<li class='__linkedIn'><a href="https://www.linkedin.com/in/dznqbit/">linkedIn</a></li>
+<li class='__github'><a href="https://github.com/dznqbit">github</a></li>
 </ul>
-<div>
-I build tools for people to do their jobs.
-</div>
-<h2 class='-caps'>Skills</h2>
-<div>
-<ul class='inlineList'>
-<li>ruby</li>
-<li>javascript</li>
-<li>css</li>
-<li>sql (mysql, ms sql)</li>
-<li>c#</li>
+<section class='profile'>
+<h2 class='-caps'>Profile</h2>
+<p>
+Full-stack web developer with 10 years experience. I love Ruby and appreciate Rails.
+During my time at Totokaelo we grew from 150k to 14M in annual sales on our proprietary platform.
+I enjoy building tools that save people time.
+</p>
+</section>
+<section class='gigs'>
+<h2 class='-caps'>Work Experience</h2>
+<div class='__gig -totokaelo'>
+<h3 class='__company'>Totokaelo</h3>
+<div class='__role'>Lead Developer</div>
+<div class='__timespan'>2013-present</div>
+<div class='__description'>
+As Totokaelo's sales volume increased so did their technical demands. I was brought on full time to improve and maintain our platform.
+This platform was the "brain" of the business: eCommerce, point of sale, order fulfillment, CMS, CRM, reporting, receiving, etc.
+<h3>Notable Responsibilities</h3>
+<ul class='__responsibilities'>
+<li>Building a sophisticated ordering/receiving workflow. The upload of one Product Order XLSX file would bulk create products in expectation of their delivery.</li>
+<li>Improving the image upload process. Images would be tagged with product SKUs during the photo shoot through EXIF data; the upload of one zip file would bulk update products with appropriate images.</li>
+<li>Updating responsive styling for our tablet/mobile users.</li>
+<li>Revamping point of sale interface to allow for checkout via tablet/mobile.</li>
+<li>Adding a "location" dimension to our inventory database, allowing us to scale from one store to many stores. This included assigning items to specific fulfillment centers while balancing minimum shipping cost and maximum customer satisfaction. Delivered on-time and well-tested in a critical period for our company.</li>
+<li>Integrating our fulfillment pipeline with multiple Third Party Logistics vendors.</li>
+<li>Tailoring our database for reporting via RJMetrics, and writing/administering reports for our accounting, merchant, sales, and logistics teams.</li>
+<li>Collaborating with a third party vendor to migrate our product data, inventory, customer base, and sales history to their platform (Teamwork).</li>
+<li>Implementing a Magento theme to present the eCommerce layer of the Teamwork integration over the course of one month.</li>
 </ul>
 </div>
+</div>
+<div class='__gig -totokaeloFreelance'>
+<h3 class='__company'>Totokaelo</h3>
+<div class='__role'>Contract Developer</div>
+<div class='__timespan'>2009-2013</div>
+<div class='__description'>
+Totokaelo was an established Seattle brick-and-mortar boutique in 2009, and had just launched its eCommerce presence. I was contracted part-time to improve the website, and my responsibilities grew from there
+<span class='__tech'>Ruby on Rails, MySQL, HTML/CSS/Javascript, nginx + passenger</span>.
+<h3>Notable Responsibilities and Features</h3>
+<ul class='__responsibilities'>
+<li>Building a modern eCommerce checkout pipeline, including Authorize.net and Paypal integrations.</li>
+<li>Building a point of sale checkout console for our brick-and-mortar store.</li>
+<li>Creating a flexible Order management system, including Fedex API integration and returns processing.</li>
+<li>Adding CMS tools for the catalog, including admin screens for styles, designers, categories, blog entries, etc.</li>
+<li>Implementing a stylized eCommerce shopping experience for our "Art–Object" department.</li>
+<li>Creating and maintaining our "One Sheets": designer-specific PDFs that included product photos and sales metrics. These were a huge hit with the vendors, and indispensable during market.</li>
+<li>
+Constantly refactoring the codebase, including factoring out
+<span class='__tech -plain'>Javascript</span>
+assets to their own files, transitioning from
+<span class='__tech -plain'>Prototype.js</span>
+to
+<span class='__tech -plain'>jQuery</span>,
+and upgrading
+<span class='__tech -plain'>RoR</span>
+from v1 to v4.
+</li>
+</ul>
+</div>
+</div>
+<div class='__gig -diy'>
+<h3 class='__company'>DIY Media Inc</h3>
+<div class='__role'>Senior Developer</div>
+<div class='__timespan'>2010-2011</div>
+<div class='__description'>
+Beetlabs re-branded to DIY Media Inc. We continued with digital downloads, but expanded our feature set to include a CRM for content creators to manage their own catalogs.
+<h3>Notable Responsibilities</h3>
+<ul class='__responsibilities'>
+<li>
+Building out the CMS across all tiers: front end
+<span class='__tech'>Flex 3</span>,
+middle tier
+<span class='__tech'>C#/ASP.NET</span>,
+and back end
+<span class='__tech'>nHibernate/SQL Server</span>.
+</li>
+<li>
+Building out customizable, portable storefronts
+<span class='__tech'>Flex 3</span>.
+Customizing said storefronts for our clients.
+</li>
+<li>
+Porting the media transcoding stack to Amazon's EC2
+<span class='__tech'>C#, LAME, FLAC</span>.
+</li>
+</ul>
+</div>
+</div>
+<div class='__gig -beetlabs'>
+<h3 class='__company'>Beetlabs Inc.</h3>
+<div class='__role'>Intern, Junior Developer, Programming Specialist</div>
+<div class='__timespan'>2006-2010</div>
+<div class='__description'>
+Beetlabs created a next-gen digital download storefront specialized in electronic dance music.
+<h3>Notable Responsibilities</h3>
+<ul class='__responsibilities'>
+<li>
+Creating and maintaining stored procedures
+<span class='__tech'>SQL Server 2006</span>
+for operations on our data models. Started with a traditional model (ORM, foreign keys, etc), later favored a document-oriented DB using SQL Server's XML capabilities.
+</li>
+<li>
+Receiving hundreds of gigabytes of uncompressed content and transcoding to multiple file formats with metadata intact
+<span class='__tech'>Ruby, LAME, FLAC</span>.
+</li>
+<li>
+Building out web UX for the MP3 player
+<span class='__tech'>HTML, CSS, Javascript, Flash</span>.
+Supported IE6, among other browsers.
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class='education'>
 <h2 class='-caps'>Education</h2>
 <ul>
 <li>
@@ -54,8 +158,7 @@ Certificate in iOS and Mac Application Development
 University of Washington 2014
 </li>
 </ul>
-<h2 class='-caps'>Work Experience</h2>
-<h2>Totokaelo</h2>
+</section>
 
 </main>
 <script src="/assets/javascripts/main.bundle.js"></script>
