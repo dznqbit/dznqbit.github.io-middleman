@@ -3,34 +3,137 @@
   content_for :show_h1, false
 
 %h2.-caps Quinton Harris
-%ul
-  %li #{link_to 'quinton.harris@gmail.com', 'mailto:quinton.harris@gmail.com'}
+%ul.contact
+  %li.__email= link_to 'quinton.harris@gmail.com', 'mailto:quinton.harris@gmail.com'
+  %li.__linkedIn= link_to 'linkedIn', 'https://www.linkedin.com/in/dznqbit/'
+  %li.__github= link_to 'github', 'https://github.com/dznqbit'
 
-%div
-  I build tools for people to do their jobs.
+%section.profile
+  %h2.-caps Profile
+  %p
+    Full-stack web developer with 10 years experience. I love Ruby and appreciate Rails.
+    During my time at Totokaelo we grew from 150k to 14M in annual sales on our proprietary platform.
+    I enjoy building tools that save people time.
 
-%h2.-caps Skills
-%div
-  %ul.inlineList
-    %li ruby
-    %li javascript
-    %li css
-    %li sql (mysql, ms sql)
-    %li c#
+%section.gigs
+  %h2.-caps Work Experience
 
-%h2.-caps Education
-%ul
-  %li
-    BS Computer Science
-    %br
-    University of Alaska 2006
-  %li
-    Certificate in iOS and Mac Application Development
-    %br
-    University of Washington 2014
+  %div.__gig.-totokaelo
+    %h3.__company Totokaelo
 
-%h2.-caps Work Experience
+    .__role Lead Developer
+    .__timespan 2013-present
+    .__description
+      As Totokaelo's sales volume increased so did their technical demands. I was brought on full time to improve and maintain our platform.
+      This platform was the "brain" of the business: eCommerce, point of sale, order fulfillment, CMS, CRM, reporting, receiving, etc.
 
+      %h3 Notable Responsibilities
+      %ul.__responsibilities
+        %li Building a sophisticated ordering/receiving workflow. The upload of one Product Order XLSX file would bulk create products in expectation of their delivery.
+        %li Improving the image upload process. Images would be tagged with product SKUs during the photo shoot through EXIF data; the upload of one zip file would bulk update products with appropriate images.
+        %li Updating responsive styling for our tablet/mobile users.
+        %li Revamping point of sale interface to allow for checkout via tablet/mobile.
+        %li Adding a "location" dimension to our inventory database, allowing us to scale from one store to many stores. This included assigning items to specific fulfillment centers while balancing minimum shipping cost and maximum customer satisfaction. Delivered on-time and well-tested in a critical period for our company.
+        %li Integrating our fulfillment pipeline with multiple Third Party Logistics vendors.
+        %li Tailoring our database for reporting via RJMetrics, and writing/administering reports for our accounting, merchant, sales, and logistics teams.
+        %li Collaborating with a third party vendor to migrate our product data, inventory, customer base, and sales history to their platform (Teamwork).
+        %li Implementing a Magento theme to present the eCommerce layer of the Teamwork integration over the course of one month.
 
-%h2 Totokaelo
+  %div.__gig.-totokaeloFreelance
+    %h3.__company Totokaelo
+
+    .__role Contract Developer
+    .__timespan 2009-2013
+    .__description
+      Totokaelo was an established Seattle brick-and-mortar boutique in 2009, and had just launched its eCommerce presence. I was contracted part-time to improve the website, and my responsibilities grew from there
+      = succeed '.' do
+        %span.__tech Ruby on Rails, MySQL, HTML/CSS/Javascript, nginx + passenger
+
+      %h3 Notable Responsibilities and Features
+      %ul.__responsibilities
+        %li Building a modern eCommerce checkout pipeline, including Authorize.net and Paypal integrations.
+        %li Building a point of sale checkout console for our brick-and-mortar store.
+        %li Creating a flexible Order management system, including Fedex API integration and returns processing.
+        %li Adding CMS tools for the catalog, including admin screens for styles, designers, categories, blog entries, etc.
+        %li Implementing a stylized eCommerce shopping experience for our "Art–Object" department.
+        %li Creating and maintaining our "One Sheets": designer-specific PDFs that included product photos and sales metrics. These were a huge hit with the vendors, and indispensable during market.
+        %li
+          Constantly refactoring the codebase, including factoring out
+          %span.__tech.-plain Javascript
+          assets to their own files, transitioning from
+          %span.__tech.-plain Prototype.js
+          to
+          = succeed ',' do
+            %span.__tech.-plain jQuery
+          and upgrading
+          %span.__tech.-plain RoR
+          from v1 to v4.
+
+  %div.__gig.-diy
+    %h3.__company DIY Media Inc
+
+    .__role Senior Developer
+    .__timespan 2010-2011
+    .__description
+      Beetlabs re-branded to DIY Media Inc. We continued with digital downloads, but expanded our feature set to include a CRM for content creators to manage their own catalogs.
+
+      %h3 Notable Responsibilities
+      %ul.__responsibilities
+        %li
+          Building out the CMS across all tiers: front end
+          = succeed ',' do
+            %span.__tech Flex 3
+          middle tier
+          = succeed ',' do
+            %span.__tech C#/ASP.NET
+          and back end
+          = succeed '.' do
+            %span.__tech nHibernate/SQL Server
+
+        %li
+          Building out customizable, portable storefronts
+          = succeed '.' do
+            %span.__tech Flex 3
+          Customizing said storefronts for our clients.
+
+        %li
+          Porting the media transcoding stack to Amazon's EC2
+          = succeed '.' do
+            %span.__tech C#, LAME, FLAC
+
+  %div.__gig.-beetlabs
+    %h3.__company Beetlabs Inc.
+    .__role Intern, Junior Developer, Programming Specialist
+    .__timespan 2006-2010
+    .__description
+      Beetlabs created a next-gen digital download storefront specialized in electronic dance music.
+
+      %h3 Notable Responsibilities
+      %ul.__responsibilities
+        %li
+          Creating and maintaining stored procedures
+          %span.__tech SQL Server 2006
+          for operations on our data models. Started with a traditional model (ORM, foreign keys, etc), later favored a document-oriented DB using SQL Server's XML capabilities.
+
+        %li
+          Receiving hundreds of gigabytes of uncompressed content and transcoding to multiple file formats with metadata intact
+          = succeed '.' do
+            %span.__tech Ruby, LAME, FLAC
+        %li
+          Building out web UX for the MP3 player
+          = succeed '.' do
+            %span.__tech HTML, CSS, Javascript, Flash
+          Supported IE6, among other browsers.
+
+%section.education
+  %h2.-caps Education
+  %ul
+    %li
+      BS Computer Science
+      %br
+      University of Alaska 2006
+    %li
+      Certificate in iOS and Mac Application Development
+      %br
+      University of Washington 2014
 

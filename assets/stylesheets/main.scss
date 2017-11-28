@@ -3,9 +3,8 @@
 // modifier:  -modifierName
 // element:   __elementName
 
-@import '~breakpoint-sass/stylesheets/breakpoint';
-@import 'settings';
 @import 'reset';
+@import 'settings';
 @import 'lib/flexRow';
 
 a {
@@ -29,9 +28,8 @@ body {
 
   min-width: 320px;
 
-  @include breakpoint($bp-tablet) {
-    font-size: 0.8em;
-
+  @include bp-tablet-down {
+    font-size: 0.9em;
   }
 
   &.-fullBleed {

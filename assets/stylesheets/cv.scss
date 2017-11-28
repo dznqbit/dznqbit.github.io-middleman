@@ -2,4 +2,47 @@ body.cv {
   ul li {
     margin: 0.8em 0;
   }
+
+  @include bp-mobile {
+  }
+
+  @include bp-tablet {
+  }
+
+  @include bp-desktop {
+  }
+
+  .__gig {
+    margin: 0 0 4em 0;
+
+    .__company {
+    }
+
+    .__role, .__timespan, .__description {
+      padding-left: 2em;
+    }
+
+    .__description {
+      margin: 0.5em 0;
+    }
+
+    .__responsibilities {
+      li {
+        &:before { content: '- '; }
+      }
+    }
+
+    .__tech {
+      &:before  { content: '('; }
+      &:after   { content: ')'; }
+
+      &.-plain {
+        &:before  { content: none; }
+        &:after   { content: none; }
+      }
+
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+    }
+  }
 }

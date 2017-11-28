@@ -1,3 +1,5 @@
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
 $dzn-gutter: 2rem;
 $dzn-small-gutter: $dzn-gutter / 4;
 
@@ -10,5 +12,37 @@ $dzn-pink: #e61040;
 $dzn-yellow: #ff971d;
 
 // breakpoints
-$bp-mobile: max-width 320px;
-$bp-tablet: max-width 768px;
+$bp-mobile-max: 320px;
+$bp-tablet-min: 321px;
+$bp-tablet-max: 768px;
+$bp-desktop-min: 769px;
+
+@mixin bp-mobile {
+  @include breakpoint(max-width $bp-mobile-max) {
+    @content;
+  }
+}
+
+@mixin bp-tablet-down {
+  @include breakpoint(max-width $bp-tablet-max) {
+    @content;
+  }
+}
+
+@mixin bp-tablet {
+  @include breakpoint(min-width $bp-tablet-min, max-width $bp-tablet-max) {
+    @content;
+  }
+}
+
+@mixin bp-tablet-up {
+  @include breakpoint(min-width $bp-tablet-min) {
+    @content;
+  }
+}
+
+@mixin bp-desktop {
+  @include breakpoint(min-width $bp-desktop-min) {
+    @content;
+  }
+}
