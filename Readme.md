@@ -1,5 +1,13 @@
-# dznqbit.com blog!
+# dznqbit.com 
 
-### devving
+Middleman with Webpack.
 
-All you need is `npm start` and `npm build`
+## developing
+
+`npm start` - setup webpack listener
+
+## deploying
+
+```
+npm build # build assets for production
+```
