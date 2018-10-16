@@ -2,12 +2,12 @@
 
 Middleman with Webpack.
 
-## developing
+## develop
+```
+npm start # setup webpack listener
+```
 
-`npm start` - setup webpack listener
-
-## deploying
-
+## deploy
 ```
 npm build # build assets for production
 ```
